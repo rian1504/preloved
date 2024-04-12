@@ -1,0 +1,1211 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.kontainer {
+  width: 100%;
+}
+
+.judul {
+  font-family: "Dancing Script", sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  font-size: 30px;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  padding-bottom: 20px;
+  background-color: white;
+  z-index: 1000;
+}
+
+.navbar-utama {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-utama ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-utama li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.navbar-utama a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-utama ul li .fa-cart-shopping {
+  margin: 0 0 0 -30px;
+  position: relative;
+}
+
+.navbar-utama ul li .fa-cart-shopping span {
+  color: white;
+  position: absolute;
+  background-color: #39db4a;
+  padding: 3px 7px;
+  border-radius: 50%;
+  top: -15px;
+  left: 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.navbar-utama ul li .logout {
+  margin-right: -30px;
+}
+
+.navbar-utama ul li .logout a label {
+  margin-right: 20px;
+}
+
+.navbar-utama ul li .logout a button {
+  padding: 5px 20px;
+  margin-left: 20px;
+  background: #39db4a;
+  /* color: white; */
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.navbar-utama ul li.active {
+  background-color: #39db4a;
+  padding: 5px 20px;
+  border-radius: 25px;
+}
+
+.navbar-utama ul li.active a {
+  color: white;
+}
+
+.navbar-utama ul li form .pencarian {
+  position: relative;
+}
+
+.navbar-utama ul li form .pencarian i {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navbar-utama ul li form .pencarian input {
+  margin: 0 50px 0 0;
+  border: 1px solid;
+  border-radius: 40px;
+  width: 370px;
+  padding: 5px 40px;
+}
+
+.navbar-utama ul li form input:hover {
+  border: 5px solid;
+}
+
+.navbar-utama ul li form input:focus {
+  border: 5px solid;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-tombol-masuk {
+  background-color: #39db4a;
+  padding: 5px 20px;
+  border-radius: 40px;
+}
+
+.navbar-tombol-daftar {
+  border-radius: 40px;
+  background: #cbc4bc;
+  padding: 5px 20px;
+}
+
+/* beranda */
+.konten {
+  margin: auto;
+  padding: 100px 0 0 0;
+  width: 90%;
+}
+
+.konten-header {
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+  /* Membuat div di tengah secara horizontal */
+}
+
+.konten-header-teks {
+  width: 600px;
+  margin: 0 50px 0 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.konten-header-teks h2 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.konten-header-teks p {
+  text-align: justify;
+  font-size: 16px;
+}
+
+.konten-header-review {
+  width: 500px;
+  height: 500px;
+  margin: 0 0 0 50px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.konten-header-review-video {
+  position: absolute;
+  z-index: 1;
+  /* margin-left: 3%; */
+  width: 400px;
+  /* Sesuaikan ukuran pembungkus */
+  height: 400px;
+  /* Sesuaikan ukuran pembungkus */
+  border-radius: 50%;
+  /* Untuk membuat pembungkus lingkaran */
+  overflow: hidden;
+  /* Agar gambar terpotong sesuai bentuk lingkaran */
+  background-color: black;
+  /* Memberikan latar belakang putih */
+}
+
+.konten-header-review-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.konten-header-review-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  z-index: 2;
+  position: absolute;
+  top: 350px;
+  left: 3%;
+}
+
+.konten-header-review-card {
+  background-color: white;
+  margin: 0 15px 0 0;
+  width: 220px;
+  height: 80px;
+  padding: 10px 15px 80px !important;
+  border-radius: 15px;
+  display: flex;
+  box-shadow: 7px 35px 51px 0px rgba(0, 0, 0, 0.14);
+  grid-area: 1/1;
+}
+
+.konten-header-review-card2 {
+  background-color: white;
+  margin: 0 0 0 15px;
+  width: 220px;
+  height: 80px;
+  padding: 10px 15px 80px;
+  border-radius: 15px;
+  display: flex;
+  box-shadow: 7px 35px 51px 0px rgba(0, 0, 0, 0.14);
+  grid-area: 1/2;
+}
+
+.konten-header-review-card-profile {
+  margin: 15px 10px;
+}
+
+.konten-header-review-card-profile img {
+  width: 50px;
+  /* Sesuaikan ukuran gambar */
+  height: 50px;
+  /* Sesuaikan ukuran gambar */
+  border-radius: 50%;
+  /* Mengubah gambar menjadi lingkaran */
+  object-fit: cover;
+  /* Menyesuaikan gambar dalam lingkaran */
+}
+
+.konten-header-review-card-deskripsi {
+  font-family: "Inter", sans-serif;
+  /* width: 100%; */
+  /* background-color: red; */
+}
+
+.konten-header-review-card-deskripsi h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.konten-header-review-card-deskripsi p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff7979;
+}
+
+.konten-kategori {
+  width: 100%;
+  margin: 100px 0;
+  padding: 20px 0;
+}
+
+.konten-kategori-judul {
+  text-align: center;
+  font-family: Inter;
+  font-style: normal;
+  line-height: normal;
+}
+
+.konten-kategori-judul p {
+  color: #ff6868;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+}
+
+.konten-kategori-judul h1 {
+  color: #000;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.konten-kategori-card-kontainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.konten-kategori-card-kontainer a {
+  text-decoration: none;
+  color: black;
+}
+
+.konten-kategori-card {
+  /* width: 280px; */
+  width: 20vw;
+  margin: 0 10px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 2px 10px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+.konten-kategori-card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20% 0;
+}
+
+.konten-kategori-card-item-image {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.konten-kategori-card-item img {
+  width: auto;
+  height: 130px;
+}
+
+.konten-kategori-card-item h1 {
+  color: #1e1e1e;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.konten-kategori-card-item-ikon {
+  width: 50%;
+  height: 50%;
+  padding: 13% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.konten-kategori-card-item i {
+  font-size: 50px;
+}
+
+/* konten produk */
+
+.konten-produk {
+  width: 100%;
+  margin: 100px 0;
+  padding: 20px 0;
+  /* background-color: red; */
+}
+
+.konten-produk-judul {
+  text-align: center;
+  font-family: Inter;
+  font-style: normal;
+  line-height: normal;
+}
+
+.konten-produk-judul p {
+  color: #ff6868;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+}
+
+.konten-produk-judul h1 {
+  color: #000;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.konten-produk-card-kontainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.konten-produk-card-kontainer a {
+  text-decoration: none;
+  color: black;
+}
+
+.konten-produk-card {
+  /* width: 380px; */
+  /* margin: 0 0 0 10px; */
+  /* flex-shrink: 0; */
+  width: 27vw;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 2px 10px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+.konten-produk-card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+.konten-produk-card-item-image {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.konten-produk-card-item img {
+  width: auto;
+  height: 250px;
+}
+
+.konten-produk-card-item-teks {
+  font-family: Inter;
+}
+
+.konten-produk-card-item-teks h1 {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.konten-produk-card-item-teks h2 {
+  color: #555;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: justify;
+  width: 200px;
+  text-transform: capitalize;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Sesuaikan dengan jumlah baris yang diinginkan */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.konten-produk-card-item p {
+  color: #ff6868;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* testimoni */
+.konten-testimoni {
+  display: flex;
+  width: 100%;
+  margin: 100px 0 -150px 0;
+  padding: 20px 0;
+  justify-content: center;
+}
+
+.konten-testimoni-image {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* Memastikan gambar tidak keluar dari div */
+}
+
+.konten-testimoni-image img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  /* Memastikan gambar sesuai ke dalam div */
+}
+
+/* .konten-testimoni-image img{
+  background-color: black;
+} */
+
+.konten-testimoni-review {
+  width: 650px;
+  padding: 20px;
+}
+
+.konten-testimoni-review h1 {
+  color: #ff6868;
+  font-size: 18px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+}
+
+.konten-testimoni-review h2 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 131.023%;
+  /* 78.614px */
+  text-transform: capitalize;
+  text-align: justify;
+}
+
+.konten-testimoni-review p {
+  color: #555;
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 159%;
+  white-space: pre-line;
+  text-align: justify;
+}
+
+/* footer */
+
+footer {
+  width: 100%;
+  margin: 100px 0 0 0;
+  padding: 10px 0;
+  background-color: rgba(57, 219, 74, 0.4);
+  display: flex;
+  justify-content: center;
+  font-family: inter;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  font-size: 14px;
+}
+
+footer h2 {
+  text-transform: capitalize;
+  font-family: poppins;
+  font-size: 20px;
+}
+
+footer .clothes {
+  margin: 0 100px;
+}
+
+footer .clothes h1 {
+  font-family: "Dancing Script", sans-serif;
+  font-size: 24px;
+}
+
+footer .clothes p,
+.hubungi p {
+  white-space: pre-line;
+  text-transform: capitalize;
+  color: #555;
+}
+
+footer .menu {
+  display: flex;
+  flex-direction: column;
+  margin: 0 100px;
+}
+
+footer .menu a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #555;
+}
+
+footer .hubungi {
+  margin: 0 100px;
+}
+
+/* pakaian */
+/* .konten-judul {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.konten-judul h1{
+  font-size: 40px;
+  text-transform: capitalize;
+} */
+
+.konten {
+  padding-top: 150px;
+}
+
+.konten-produk,
+.konten-kategori {
+  margin: 0;
+  padding: 0;
+}
+
+.konten-produk-card-item,
+.konten-kategori-card-item {
+  margin: 15px 0;
+}
+
+.konten-produk-card-item-teks-keranjang {
+  display: flex;
+}
+
+.konten-produk-card-item-teks-keranjang button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0 0 0 100px;
+}
+
+/* row */
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.row>* {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.col-pakaian {
+  flex: 0 0 33.33333333%;
+  /* max-width: 33.33333333%; */
+}
+
+@media (max-width: 991.98px) {
+  .col-pakaian {
+    flex: 0 0 50%;
+    /* max-width: 50%; */
+  }
+}
+
+@media (max-width: 575.98px) {
+  .col-pakaian {
+    flex: 0 0 100%;
+    /* max-width: 100%; */
+  }
+}
+
+/* Gaya default untuk .col-kategori-lg */
+.col-kategori {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+/* Gaya untuk layar medium (md) */
+@media (max-width: 992px) {
+  .col-kategori {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+}
+
+/* Gaya untuk layar kecil (sm) */
+@media (max-width: 767px) {
+  .col-sm-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+/* detail */
+
+.konten-kontainer {
+  margin: auto;
+  width: 90%;
+  min-height: 63.9vh;
+  display: flex;
+  justify-content: center;
+}
+
+.konten-detail {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+
+.konten-detail .konten-detail-image {
+  width: 350px;
+  height: 350px;
+  margin: auto 40px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gainsboro;
+}
+
+.konten-detail .konten-detail-image img {
+  width: auto;
+  height: 100%;
+}
+
+.konten-detail .konten-detail-deskripsi {
+  max-width: 600px;
+  margin: auto 0 auto 40px;
+}
+
+.konten-detail .konten-detail-deskripsi h1 {
+  color: var(--light-colors-black-light, #000);
+  font-family: DM Sans;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px;
+  text-transform: capitalize;
+}
+
+.konten-detail .konten-detail-deskripsi h2 {
+  color: var(--light-colors-dark-gray-light, #707070);
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 100% */
+  text-align: justify;
+  text-transform: capitalize;
+}
+
+.konten-detail .konten-detail-deskripsi h3 {
+  color: var(--light-colors-black-light, #000);
+  font-family: DM Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  /* 86.667% */
+}
+
+.konten-detail .konten-detail-deskripsi h4 {
+  color: var(--light-colors-black-light, #000);
+  font-family: DM Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  /* 135% */
+  text-transform: capitalize;
+}
+
+.konten-detail .konten-detail-deskripsi h4 span {
+  margin-left: 40px;
+  color: var(--light-colors-dark-gray-light, #707070);
+  font-family: DM Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  /* 135% */
+  text-transform: capitalize;
+}
+
+.konten-detail .konten-detail-deskripsi .konten-detail-deskripsi-tombol button {
+  padding: 5px 20px;
+  margin: 40px 0 0 0;
+  background: #39db4a;
+  border: none;
+  /* border-radius: 50px; */
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+/* keranjang */
+.konten-keranjang {
+  width: 100%;
+  padding: 150px 0 0 0;
+}
+
+.konten-keranjang-kontainer table {
+  width: 100%;
+  min-height: 343px;
+  border-collapse: collapse;
+}
+
+.konten-keranjang-kontainer thead th {
+  border-top: 20px solid #d9d9d9;
+  border-bottom: 20px solid #d9d9d9;
+  padding: 20px 0 20px 0;
+  color: rgba(0, 0, 0, 0.51);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.konten-keranjang-kontainer tbody {
+  line-height: 5;
+}
+
+.konten-keranjang-kontainer tbody tr td:nth-child(2) {
+  width: 200px;
+  height: 200px;
+}
+
+.keranjang-image-kontainer {
+  background-color: #d9d9d94d;
+}
+
+.konten-keranjang-kontainer tbody tr td {
+  text-align: center;
+  border-top: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.konten-keranjang-kontainer tbody tr td img {
+  display: block;
+  /* Untuk mengatur gambar menjadi elemen blok */
+  margin: 0 auto;
+  /* Untuk mengatur gambar ke tengah dalam sel */
+  height: 200px;
+  width: auto;
+}
+
+.konten-keranjang-kontainer tbody tr td h1 {
+  color: #373737;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.konten-keranjang-kontainer tbody tr td h2 {
+  color: #fe4d4d;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.konten-keranjang-kontainer tbody tr td a {
+  color: #fe4d4d;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.keranjang-footer {
+  position: sticky !important;
+  width: 100%;
+  height: 100px;
+  background-color: #7eff96;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  bottom: 0;
+}
+
+.keranjang-footer button {
+  padding: 10px 70px;
+  margin: 45px 15px 0 0;
+  background: #39db4a;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+/* bayar */
+.konten-bayar {
+  width: 100%;
+  max-width: 1200px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+}
+
+.konten-bayar .konten-bayar-judul {
+  width: 100%;
+  text-align: center;
+}
+
+.konten-bayar .konten-bayar-judul h1 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.konten-bayar .konten-bayar-alamat {
+  width: 100%;
+}
+
+.konten-bayar .konten-bayar-alamat h1 {
+  color: #000;
+  font-family: Inter;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.konten-bayar .konten-bayar-alamat .konten-bayar-alamat-deskripsi {
+  width: 300px;
+  margin: 40px 0 0 40px;
+}
+
+.konten-bayar .konten-bayar-alamat .konten-bayar-alamat-deskripsi h2 {
+  color: #000;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.konten-bayar .konten-bayar-alamat .konten-bayar-alamat-deskripsi h3 {
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.konten-bayar .konten-bayar-produk {
+  display: flex;
+  margin: 40px 0 0 0;
+  gap: 30px;
+}
+
+.konten-bayar .konten-bayar-produk-image {
+  background-color: #d9d9d94d;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.konten-bayar .konten-bayar-produk-image img {
+  width: 150px;
+}
+
+.konten-bayar .konten-bayar-produk-deskripsi {
+  color: #373737;
+  font-family: Poppins;
+  font-style: normal;
+  line-height: normal;
+  text-transform: capitalize;
+  text-align: justify;
+}
+
+.konten-bayar .konten-bayar-produk-deskripsi h1 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.konten-bayar .konten-bayar-produk-deskripsi h2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.konten-bayar .konten-bayar-pesan {
+  margin: 40px 0 0 0;
+  background-color: #d9d9d94d;
+  width: 100%;
+}
+
+.konten-bayar .konten-bayar-pesan h1 {
+  font-family: Inter;
+  font-size: 16px;
+  margin: 10px;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+
+.konten-bayar .konten-bayar-pesan input {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  margin: 10px;
+}
+
+.konten-bayar-total {
+  margin: 40px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.konten-bayar-total-deskripsi {
+  /* justify-content: flex-start; */
+  /* margin-right: 20px; */
+}
+
+.konten-bayar-total-deskripsi h1 {
+  /* justify-content: flex-start; */
+  /* margin-right: 20px; */
+  color: #000;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.konten-bayar-total-harga {
+  margin: 40px 0 40px 0;
+  display: flex;
+  /* Mengaktifkan flexbox di dalam konten harga */
+  flex-direction: column;
+  align-items: flex-end;
+  /* Menyamakan tinggi konten secara vertikal */
+}
+
+.konten-bayar-total-harga h1 {
+  margin-right: 20px;
+  /* Memberikan jarak antara h1 dan button */
+  color: #000;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.konten-bayar-total-harga form button {
+  padding: 5px 20px;
+  background: #39db4a;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+/* transaksi */
+.konten-transaksi {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.konten-transaksi-judul {
+  width: 100%;
+  text-align: center;
+}
+
+.konten-transaksi-judul h1 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.konten-transaksi-produk-tanggal h1 {
+  color: #5a5757;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.konten-transaksi-produk {
+  display: flex;
+  margin: 20px 0;
+}
+
+.konten-transaksi-produk-image {
+  background-color: #d9d9d94d;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.konten-transaksi-produk-image img {
+  width: auto;
+  height: 100%;
+}
+
+.konten-transaksi-produk-deskripsi {
+  margin: 0 20px;
+  color: #000;
+  font-family: Poppins;
+  font-style: normal;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.konten-transaksi-produk-deskripsi h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.konten-transaksi-produk-deskripsi h2 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.konten-transaksi-total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.konten-transaksi-total-deskripsi {
+  margin-left: 220px;
+}
+
+.konten-transaksi-total-deskripsi h1 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.konten-transaksi-total-harga h1 {
+  color: #fe4d4d;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.konten-transaksi-total-harga h2 {
+  color: #39db4a;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150.523%;
+  /* 42.146px */
+  text-transform: uppercase;
+}
+
+/* tombol kembali */
+.konten-tombol-kembali a i {
+  font-size: 30px;
+  color: black;
+  /* margin: 20px 0 -20px 20px; */
+  position: relative;
+  top: 20px;
+  left: 20px;
+}

@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* daftar */
+.kontainer-daftar {
+    width: 100%;
+    height: 169vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.halaman-daftar {
+    background-color: #f5f8ff;
+    border-radius: 20px;
+    padding: 20px 0;
+    max-width: 1000px;
+    /* Menggunakan max-width agar responsif */
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.judul h1 {
+    text-transform: capitalize;
+    color: #09090b;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+}
+
+.judul h2 {
+    color: #71717a;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 120% */
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.input-kontainer-daftar {
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    width: 453px;
+    height: 64px;
+    border-radius: 10px;
+    border: 2px solid #39db4a;
+    background: rgba(57, 219, 74, 0.1);
+    position: relative;
+}
+
+.input-kontainer-daftar input[type="text"],
+.input-kontainer-daftar input[type="password"] {
+    width: 100%;
+    height: 100%;
+    padding-left: 60px;
+    border: none;
+    background: transparent;
+}
+
+.input-kontainer-daftar input[type="text"]:focus,
+.input-kontainer-daftar input[type="password"]:focus {
+    background: rgba(57, 219, 74, 0.2);
+    outline: none;
+}
+
+.input-kontainer-daftar i {
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 60%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.form-login-daftar button {
+    display: flex;
+    margin: 30px auto 30px;
+    width: 453px;
+    height: 64px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #39DB4A;
+    border: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.form-login-daftar p {
+    color: #39DB4A;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+
+.form-login-daftar a {
+    text-decoration: none;
+}
+
+
+.form-login-daftar span {
+    color: #39DB4A;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+
+.input-kontainer-daftar input[type="date"] {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    appearance: none; /* Menghilangkan gaya bawaan */
+    padding-left: 60px;
+}
+
+/* .input-kontainer-daftar input[type="date"]::-webkit-calendar-picker-indicator {
+    Menyembunyikan ikon kalender di browser WebKit
+    display: none;
+} */
+
+/* Memberi tampilan custom pada input date */
+.input-kontainer-daftar input[type="date"]::before {
+    /* content: '\1F4C5'; Unicode karakter untuk ikon kalender */
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 16px;
+    pointer-events: none; /* Menghilangkan interaksi mouse */
+}

@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* body,
+html {
+} */
+
+.kontainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.halaman-login {
+    background-color: #F5F8FF;
+    border-radius: 20px;
+    padding: 20px 0;
+    max-width: 1000px;
+    /* Menggunakan max-width agar responsif */
+    width: 100%;
+    /* Mengisi seluruh lebar kontainer */
+    min-height: 500px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.form-login-daftar {
+    /* margin-top: 50px; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.judul {
+    margin: auto;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.judul h1 {
+    text-transform: capitalize;
+    color: #09090B;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+}
+
+
+
+.input-kontainer {
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    width: 453px;
+    height: 64px;
+    border-radius: 10px;
+    border: 2px solid #39DB4A;
+    background: rgba(57, 219, 74, 0.10);
+    position: relative;
+}
+
+.input-kontainer input[type="text"],
+.input-kontainer input[type="password"] {
+    width: 100%;
+    height: 100%;
+    padding-left: 60px;
+    border: none;
+    background: transparent;
+}
+
+.input-kontainer i {
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 60%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+
+.ingat-saya {
+    display: flex;
+    width: 453px;
+    margin: auto;
+}
+
+.ingat-saya input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    /* Menghilangkan gaya bawaan checkbox */
+}
+
+.ingat-saya input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 30px;
+    margin-left: -20px;
+    /* Ruang untuk centang */
+}
+
+.ingat-saya input[type="checkbox"]+label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #39DB4A;
+    /* Warna border kotak */
+    border-radius: 3px;
+}
+
+.ingat-saya input[type="checkbox"]:checked+label::before {
+    content: '\1F5F8';
+    /* Unicode karakter untuk centang (✓) */
+    font-size: 16px;
+    /* Ukuran font centang */
+    color: white;
+    background-color: #39DB4A;
+    /* Warna latar belakang ketika checkbox dicentang */
+}
+
+
+.ingat-saya label {
+    margin: 0 225px 0 10px;
+    color: #39DB4A;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.ingat-saya a {
+    color: #39DB4A;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 24px;
+}
+
+.form-login-daftar button {
+    display: flex;
+    margin: 30px auto 30px;
+    width: 453px;
+    height: 64px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #39DB4A;
+    border: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.form-login-daftar p {
+    color: #39DB4A;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+
+.form-login-daftar a {
+    text-decoration: none;
+}
+
+
+.form-login-daftar span {
+    color: #39DB4A;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+
+/* tambahan */
+.input-kontainer input[type="text"]:focus,
+.input-kontainer input[type="password"]:focus {
+    background: rgba(57, 219, 74, 0.2);
+    outline: none;
+}
+
+.form-login-daftar button {
+    /* Aturan-aturan lain */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.form-login-daftar button:hover {
+    background-color: #5dd360;
+    color: #fff;
+}
+

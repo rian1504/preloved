@@ -1,0 +1,21 @@
+/* sidebar */
+.sidebar ul{
+    list-style-type: none;
+}
+.sidebar img{
+    width: 15%;
+    margin: -70px 0 0 -30px;
+}
+.sidebar li{
+    width: 15%;
+    height: 50px;
+    background-color: #39DB4A66;
+    margin: 2px 0 2px -30px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li a{
+    width: 100%;
+    background-color: red;
+}
